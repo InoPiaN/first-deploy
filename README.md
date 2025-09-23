@@ -1,6 +1,6 @@
 # first-deploy
 
-![fox](public\Fox.jpg).
+<img width="559" height="583" alt="Image" src="https://github.com/user-attachments/assets/470410ad-87a1-4d1a-8a9a-c895cd4a1f30" />
 
 ## Getting Started
 
