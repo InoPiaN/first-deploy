@@ -40,19 +40,19 @@ export default async function Home() {
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
             안녕하세요{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
+            <li >
               개발자 {data.name} 입니다
-            </code>
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
+            </li>
+            <li >
               깃허브 주소는 {data.github} 입니다
-            </code>
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
+            </li>
+            <li >
               전공은 {data.major} 입니다
-            </code>
+            </li>
           </li>
-          <li className="tracking-[-.01em]">
+          <ol className="tracking-[-.01em]">
             열심히 하겠습니다.
-          </li>
+          </ol>
         </ol>
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
