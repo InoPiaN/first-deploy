@@ -5,6 +5,7 @@
 ## Getting Started
 
 First, run the development server:
+step.01 finish - 2025.09.03
 
 ```bash
 Distributor ID: Ubuntu
