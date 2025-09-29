@@ -27,45 +27,126 @@ export default async function Home() {
 
 
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/Fox.jpg"
-          alt="Next.js logo"
-          width={300}
-          height={100}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            안녕하세요{" "}
-            <li >
-              개발자 {data.name} 입니다
-            </li>
-            <li >
-              깃허브 주소는 {data.github} 입니다
-            </li>
-            <li >
-              전공은 {data.major} 입니다
-            </li>
-          </li>
-          <ol className="tracking-[-.01em]">
-            열심히 하겠습니다.
-          </ol>
-        </ol>
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            진행중인 프로젝트는 {portfolioData.projectName}이고 {" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              내용은 {portfolioData.content} 입니다.
-            </code>
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              URL은 {portfolioData.URL} 입니다.
-            </code>
-          </li>
-        </ol>
-      </main>
+    <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg grid grid-cols-3">
+      {/* Left Sidebar */}
+      <div className="col-span-1 bg-gray-100 p-6 flex flex-col items-center">
+        {/* 프로필 사진 */}
+        <div className="w-32 h-32 relative rounded-full overflow-hidden mb-4">
+          <Image src="/profile.jpg" alt="Profile Photo" fill />
+        </div>
+
+        <h1 className="text-xl font-bold text-center text-black" >[이름] : 장준희</h1>
+        <p className="text-sm text-gray-600 mb-6 text-black">[전공] 로봇공학과 / 기계공학과 </p>
+        <p className="text-sm text-gray-600 mb-6 text-black"> 최적화 알고리즘 설계 </p>
+
+
+        {/* 연락처 / 이메일 / 웹사이트 / 주소 */}
+        <div className="space-y-2 text-sm font-bold text-black w-full">
+          <p>[전화번호] : 010 - 4176 - 0235 </p>
+          <p>[이메일] : jh_95@naver.com </p>
+          <p>[GitHub]  </p>
+          <p>[주소] 서울특별시 성동구 고산자로8길7 302호</p>
+        </div>
+
+        {/* Education */}
+        <div className="mt-8 w-full">
+          <h2 className="text-lg font-semibold text-black mb-2">Education</h2>
+          <ul className="space-y-3 text-black text-sm">
+            <li className= "text-black">한양대학교 공과대학원 석사 / 2024 </li>
+          </ul>
+        </div>
+
+        {/* Expertise */}
+        <div className="mt-8 w-full">
+          <h2 className="text-lg font-semibold text-black mb-2">Expertise</h2>
+          <ul className="list-disc text-black pl-4 text-sm">
+            <li className= "text-black">[전문분야 1] : 최적화 알고리즘 설계 </li>
+            <li className= "text-black">[전문분야 2] : 백엔드 </li>
+            <li className= "text-black">[전문분야 3] : 3D 모델링</li>
+          </ul>
+        </div>
+
+        {/* Language */}
+        <div className="mt-8 w-full">
+          <h2 className="text-lg font-semibold text-black mb-2">Language</h2>
+          <ul className="list-disc text-black pl-4 text-sm">
+            <li className= "text-black">영어</li>
+            <li className= "text-black">일본어</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Right Content */}
+      <div className="col-span-2 p-8">
+        {/* Profile */}
+        <div> 
+          <h2 className="text-lg font-semibold text-black mb-2">Profile</h2>
+          <p className="text-sm text-black text-gray-700"></p>
+          <p className="text-sm text-black text-gray-700">저는 <strong>도전을 통해 성장하는 개발자</strong>입니다.</p>
+          <p className="text-sm text-black text-gray-700">
+            낯선 문제를 직접 해결해 나가면서 <strong>실행이 곧 변화의 시작</strong>임을 깨달았고
+          </p>
+          <p className="text-sm text-black text-gray-700">
+            다양한 사람들과 소통하며 <strong>열린 시각</strong>을 얻고, 협업 속에서 더 나은 해결책을 도출하는 경험을 쌓았습니다.
+          </p>
+          <p className="text-sm text-black text-gray-700"> 
+            마라톤 완주 경험을 통해 <strong>끈기와 협력의 가치</strong>를 배웠으며, 이는 개발 과정에서 마주하는 문제를 극복하고 팀과 함께 개선해 나가는 힘이 되고 있습니다.
+          </p>
+        </div>
+
+        {/* Work Experience */}
+        <div className="mt-8">
+          <h2 className="text-lg font-semibold text-black mb-2">Work Experience</h2>
+          <div className="space-y-6">
+            {/* 경력 아이템 */}
+            <div>
+              <div className="flex justify-between text-black text-sm font-semibold">
+                <span className= "text-black"> Swarm robot control </span>
+                <span className= "text-black">[2017 - 2021]</span>
+              </div>
+              <p className="text-sm text-gray-700 text-black">[직책] : 팀장</p>
+              <ul className="list-disc text-black pl-4 text-sm text-black text-gray-600 mt-1">
+                <li className= "text-black">군집 로봇 알고리즘 설계</li>
+                <li className= "text-black">군집 로봇 기구 제작</li>
+                <li className= "text-black">모터 제어</li>
+              </ul>
+            </div>
+            <div>
+              <div className="flex justify-between text-black text-sm font-semibold">
+                <span className= "text-black"> Optimal route generation algorithm </span>
+                <span className= "text-black">[2021 - 2024]</span>
+              </div>
+              <p className="text-sm text-gray-700 text-black">[직책] : 연구원</p>
+              <ul className="list-disc text-black pl-4 text-sm text-black text-gray-600 mt-1">
+                <li className= "text-black">무인기 경로 최적화 알고리즘 설계</li>
+                <li className= "text-black">무인기 충돌 방지 시스템 설계</li>
+                <li className= "text-black">무인기 통신 최적화 알고리즘 설계</li>
+              </ul>
+            </div>
+            
+            {/* 경력 추가 */}
+          </div>
+        </div>
+
+        {/* References */}
+        {/* <div className="mt-8">
+          <h2 className="text-lg font-semibold text-black mb-2">References</h2>
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p className="font-semibold text-black">[이름 / 직책]</p>
+              <p className= "text-black">[회사명]</p>
+              <p className= "text-black">Phone: [번호]</p>
+              <p className= "text-black">Email: [이메일]</p>
+            </div>
+            <div>
+              <p className="font-semibold text-black">[이름 / 직책]</p>
+              <p className= "text-black">[회사명]</p>
+              <p className= "text-black">Phone: [번호]</p>
+              <p className= "text-black">Email: [이메일]</p>
+            </div>
+          </div>
+        </div> */}
+      </div>
     </div>
   );
 }
